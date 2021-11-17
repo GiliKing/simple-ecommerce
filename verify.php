@@ -3,6 +3,8 @@
 
 ini_set('display_errors', 1);
 
+session_start();
+
 $email = $_SESSION['NewEmail'];
 $token = $_SESSION['NewToken'];
 
