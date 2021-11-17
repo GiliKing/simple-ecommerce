@@ -79,7 +79,7 @@ if(isset($_POST['upload'])){
     $name = htmlspecialchars(trim($_POST['name']), ENT_QUOTES);
     $amount = htmlspecialchars(trim($_POST['amount']), ENT_QUOTES);
     $info = htmlspecialchars(trim($_POST['info']), ENT_QUOTES);
-    $token = bin2hex(random_bytes(10));
+    $token = bin2hex(random_bytes(5));
 
 	$pf = $_FILES['image'];
 
@@ -107,17 +107,17 @@ if(isset($_POST['upload'])){
 		$allowed_types = ['image/png', 'image/jpeg', 'image/PNG', 'image/JPG'];
 
 
-		$pf_name = $pf['name'];
+		$pf_name = $token.$pf['name'];
 		$pf_type = $pf['type'];
 		$pf_tmp = $pf['tmp_name'];
 
 		if(in_array($pf_type, $allowed_types)){
 
-			if(!is_dir("{$token}")){
-				mkdir("{$token}");
+			if(!is_dir("images")){
+				mkdir("images");
 			}
 
-			$photo_path = "{$token}/{$pf_name}";
+			$photo_path = "images/{$pf_name}";
 
 			require "functions/functions.php";
 

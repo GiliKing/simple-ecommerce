@@ -1,20 +1,24 @@
 <?php 
 
-    require "database/connect.php";
+    if(isset($_POST['ok'])) {
+        
+        require "database/connect.php";
 
-    $id = $_GET['id'];
+        $id = $_POST['ok'];
 
-    $del = "DELETE FROM `cart` WHERE `id` = $id";
+        $del = "DELETE FROM `cart` WHERE `id` = $id";
 
-    $rel_del = mysqli_query($conn, $del);
+        $rel_del = mysqli_query($conn, $del);
 
-    if($rel_del) {
+        if($rel_del) {
 
-        mysqli_close($conn); // close the database connection
+            mysqli_close($conn); // close the database connection
 
-        header("location:placeOrder.php"); // go to the History page;
+            header("location:placeOrder.php"); // go to the History page;
+        }
     }
 ?>
+
 
 <?php
     require "database/connect.php";

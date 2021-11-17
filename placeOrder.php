@@ -103,10 +103,23 @@ if(!isset($_SESSION['users']['name'])) {
                 <button id="money'.$id.'">Delete</button>
                 <script>
                     document.getElementById("money'.$id.'").addEventListener("click", function() {
-                        let askUser = confirm("Do you want to remove this Search")
+                        let askUser = confirm("Do you want to remove this item")
 
                         if(askUser == true) {
-                            window.location.href = "delete.php?id=$id";
+
+                            $.ajax({
+                                url: "delete.php", // containers our query logic
+                                method: "POST",
+                                data : {
+                                    ok: '.$id.'
+                                },
+                                success: function(data) {
+
+                                    window.location.href = "placeOrder.php";
+
+                                }
+
+                            });
                         }
                     })
                 </script>
