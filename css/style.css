@@ -104,7 +104,7 @@ div.mav_image {
 
 img#image {
     width: 100%;
-    border: 5px solid red;
+    border: 5px solid rgb(0,123,255);
 }
 
 div#stay_center {
