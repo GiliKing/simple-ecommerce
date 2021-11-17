@@ -79,7 +79,7 @@ if(isset($_POST['upload'])){
     $name = htmlspecialchars(trim($_POST['name']), ENT_QUOTES);
     $amount = htmlspecialchars(trim($_POST['amount']), ENT_QUOTES);
     $info = htmlspecialchars(trim($_POST['info']), ENT_QUOTES);
-    $token = bin2hex(random_bytes(20));
+    $token = bin2hex(random_bytes(10));
 
 	$pf = $_FILES['image'];
 
