@@ -43,7 +43,7 @@ function sendVerificationEmail($email, $token) {
             <body>
                 <div class="container">
                    <p>Thank You for signing up on our site. Please click on the link below to verify your account:</p>
-                   <a href="http://localhost/php-project/simple-ecommerce/verifyEmail.php?token=' . $token . '">Verify Email</a>
+                   <a href="https://maverick-meal.herokuapp.com/verifyEmail.php?token=' . $token . '">Verify Email</a>
                 </div>
             </body>
         </html>
