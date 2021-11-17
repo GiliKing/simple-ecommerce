@@ -100,7 +100,16 @@ if(!isset($_SESSION['users']['name'])) {
                 <td>'.$quantity.'</td>
                 <td>'.$total.'</td>
                 <td>
-                <button>Delete</button>
+                <button id="money'.$id.'">Delete</button>
+                <script>
+                    document.getElementById("money'.$id.'").addEventListener("click", function() {
+                        let askUser = confirm("Do you want to remove this Search")
+
+                        if(askUser == true) {
+                            window.location.href = "delete.php?id=$id";
+                        }
+                    })
+                </script>
                 </td>
                 <tr>              
                 ';

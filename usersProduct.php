@@ -129,7 +129,7 @@ if($product_result) {
                 <!-- gives it the card feeling -->
                 <div class="card">
                    <div class="card-header">
-                   <h2>Invoice Reciept</h2>
+                   <h2>CART</h2>
                    </div>
                     <div class="card-body">
                         <div class="class-text" id="p_text"></div>

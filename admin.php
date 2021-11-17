@@ -2,7 +2,7 @@
 
 include "display.php";
     
-if($_SESSION['users']['name'] == null && $_SESSION['users']['email'] == null) {
+if(!isset($_SESSION['users']['name']) && $_SESSION['users']['email'] != "chrisogili12@gmail.com") {
   header("location: index.php");
 }
 
