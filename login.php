@@ -1,4 +1,14 @@
+<?php 
 
+session_start();
+    
+if(isset($_SESSION['users']['name'])) {
+
+    header("location: user.php");
+    
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,14 +1,3 @@
-<?php 
-
-session_start();
-
-if($_SESSION['users']['name'] == null && $_SESSION['users']['email'] == null) {
-    header("location: index.php");
-}
-
-
-?>
-
 
 
 <?php

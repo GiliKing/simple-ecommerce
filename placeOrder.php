@@ -1,5 +1,17 @@
 <!-- display all the ordered product -->
 
+<?php 
+
+session_start();
+    
+if(!isset($_SESSION['users']['name'])) {
+
+    header("location: index.php");
+    
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
